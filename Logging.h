@@ -12,7 +12,6 @@ extern "C" {
   #include <avr/io.h>
 }
 
-
 #define LOG_LEVEL_NOOUTPUT 0 
 #define LOG_LEVEL_ERRORS 1
 #define LOG_LEVEL_INFOS 2
@@ -21,7 +20,6 @@ extern "C" {
 
 // default loglevel if nothing is set from user
 #define LOGLEVEL LOG_LEVEL_DEBUG 
-
 
 #define CR "\r\n"
 #define LOGGING_VERSION 1
@@ -132,7 +130,6 @@ public:
     */
 
     void Verbose(char* msg, ...);   
-
     
 private:
     void print(const char *format, va_list args);
@@ -140,7 +137,3 @@ private:
 
 extern Logging Log;
 #endif
-
-
-
-

@@ -15,7 +15,6 @@ void Logging::Error(char* msg, ...){
     }
 }
 
-
 void Logging::Info(char* msg, ...){
     if (LOG_LEVEL_INFOS <= _level) {
         print("INFO: ", 0);
@@ -34,7 +33,6 @@ void Logging::Debug(char* msg, ...){
     }
 }
 
-
 void Logging::Verbose(char* msg, ...){
     if (LOG_LEVEL_VERBOSE <= _level) {
         print("VERBOSE: ", 0);
@@ -44,9 +42,7 @@ void Logging::Verbose(char* msg, ...){
     }
 }
 
-
-
- void Logging::print(const char *format, va_list args) {
+void Logging::print(const char *format, va_list args) {
     //
     // loop through format string
     for (; *format != 0; ++format) {
