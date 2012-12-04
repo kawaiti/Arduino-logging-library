@@ -3,9 +3,9 @@
 #include <inttypes.h>
 #include <stdarg.h>
 #if defined(ARDUINO) && ARDUINO >= 100
-	#include "Arduino.h"
+  #include "Arduino.h"
 #else
-	#include "WProgram.h"
+  #include "WProgram.h"
 #endif
 //#include "pins_arduino.h"
 extern "C" {
@@ -74,62 +74,62 @@ private:
     long _baud;
 public:
     /*! 
-	 * default Constructor
-	 */
+    * default Constructor
+    */
     Logging(){} ;
-	
+
     /** 
-	* Initializing, must be called as first.
-	* \param void
-	* \return void
-	*
-	*/
-	void Init(int level, long baud);
-	
+    * Initializing, must be called as first.
+    * \param void
+    * \return void
+    *
+    */
+    void Init(int level, long baud);
+
     /**
-	* Output an error message. Output message contains
-	* ERROR: followed by original msg
-	* Error messages are printed out, at every loglevel
-	* except 0 ;-)
-	* \param msg format string to output
-	* \param ... any number of variables
-	* \return void
-	*/
+    * Output an error message. Output message contains
+    * ERROR: followed by original msg
+    * Error messages are printed out, at every loglevel
+    * except 0 ;-)
+    * \param msg format string to output
+    * \param ... any number of variables
+    * \return void
+    */
     void Error(char* msg, ...);
-	
+
     /**
-	* Output an info message. Output message contains
-	* Info messages are printed out at l
-	* loglevels >= LOG_LEVEL_INFOS
-	*
-	* \param msg format string to output
-	* \param ... any number of variables
-	* \return void
-	*/
+    * Output an info message. Output message contains
+    * Info messages are printed out at l
+    * loglevels >= LOG_LEVEL_INFOS
+    *
+    * \param msg format string to output
+    * \param ... any number of variables
+    * \return void
+    */
 
    void Info(char* msg, ...);
-	
+
     /**
-	* Output an debug message. Output message contains
-	* Debug messages are printed out at l
-	* loglevels >= LOG_LEVEL_DEBUG
-	*
-	* \param msg format string to output
-	* \param ... any number of variables
-	* \return void
-	*/
+    * Output an debug message. Output message contains
+    * Debug messages are printed out at l
+    * loglevels >= LOG_LEVEL_DEBUG
+    *
+    * \param msg format string to output
+    * \param ... any number of variables
+    * \return void
+    */
 
     void Debug(char* msg, ...);
-	
+
     /**
-	* Output an verbose message. Output message contains
-	* Debug messages are printed out at l
-	* loglevels >= LOG_LEVEL_VERBOSE
-	*
-	* \param msg format string to output
-	* \param ... any number of variables
-	* \return void
-	*/
+    * Output an verbose message. Output message contains
+    * Debug messages are printed out at l
+    * loglevels >= LOG_LEVEL_VERBOSE
+    *
+    * \param msg format string to output
+    * \param ... any number of variables
+    * \return void
+    */
 
     void Verbose(char* msg, ...);   
 
