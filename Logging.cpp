@@ -8,7 +8,7 @@ void Logging::Init(int level, long baud){
 
 void Logging::Error(char* msg, ...){
     if (LOG_LEVEL_ERRORS <= _level) {   
-        print ("ERROR: ",0);
+        print ("ERROR: ", 0);
         va_list args;
         va_start(args, msg);
         print(msg,args);
@@ -18,6 +18,7 @@ void Logging::Error(char* msg, ...){
 
 void Logging::Info(char* msg, ...){
     if (LOG_LEVEL_INFOS <= _level) {
+        print("INFO: ", 0);
         va_list args;
         va_start(args, msg);
         print(msg,args);
@@ -26,6 +27,7 @@ void Logging::Info(char* msg, ...){
 
 void Logging::Debug(char* msg, ...){
     if (LOG_LEVEL_DEBUG <= _level) {
+        print("DEBUG: ", 0);
         va_list args;
         va_start(args, msg);
         print(msg,args);
@@ -35,6 +37,7 @@ void Logging::Debug(char* msg, ...){
 
 void Logging::Verbose(char* msg, ...){
     if (LOG_LEVEL_VERBOSE <= _level) {
+        print("VERBOSE: ", 0);
         va_list args;
         va_start(args, msg);
         print(msg,args);
