@@ -85,6 +85,14 @@ public:
     void Init(int level, long baud);
 
     /**
+    * Set loglevel.
+    * \param void
+    * \return void
+    *
+    */
+    void setLevel(int level);
+
+    /**
     * Output an error message. Output message contains
     * ERROR: followed by original msg
     * Error messages are printed out, at every loglevel

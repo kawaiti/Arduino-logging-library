@@ -6,6 +6,10 @@ void Logging::Init(int level, long baud){
     Serial.begin(_baud);
 }
 
+void Logging::setLevel(int level) {
+    _level = constrain(level,LOG_LEVEL_NOOUTPUT,LOG_LEVEL_VERBOSE);
+}
+
 void Logging::Error(char* msg, ...){
     if (LOG_LEVEL_ERRORS <= _level) {   
         print ("ERROR: ", 0);
@@ -111,6 +115,6 @@ void Logging::print(const char *format, va_list args) {
         }
         Serial.print(*format);
     }
- }
+}
  
- Logging Log = Logging();
+Logging Log = Logging();
