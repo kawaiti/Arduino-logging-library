@@ -15,6 +15,7 @@ Info	KEYWORD2	info output
 Debug	KEYWORD2	debug output
 Verbose	KEYWORD2	verbose output
 Init	KEYWORD2	initialiazing
+setLevel	KEYWORD2	set loglevel
 
 #######################################
 #	Instances	(KEYWORD2)
